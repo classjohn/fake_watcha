@@ -15,6 +15,11 @@
   <%= @movie.desc %>
 </p>
 
+<p>
+  <strong>평점 평균:</strong>
+  <%= @movie.reviews.average(:rating) %>
+</p>
+
 <%= form_tag("/movies/#{@movie.id}/reviews", method: :get) do %>
 <p>
   <strong>평점: </strong>

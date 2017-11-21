@@ -10,6 +10,15 @@ class MoviesController < ApplicationController
   # GET /movies/1
   # GET /movies/1.json
   def show
+    # total = 0
+    # @movie.reviews.each do |review|
+    #   total += review.rating
+    # end
+    # if @movie.reviews.count == 0
+    #   @avg = 0
+    # else
+    #   @avg = total.to_f / @movie.reviews.count
+    # end
     # @sum = 0
     # @sum = @sum + 특정 영화에 있는 모든 리뷰들을 돌면서 하나씩 더하기
     # 1. 특정 영화에 담긴 리뷰들을 다 불러온다.
