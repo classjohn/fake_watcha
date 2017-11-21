@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
+  get 'reviews/create'
+
   devise_for :users
   resources :movies
+
+  get 'movies/:id/reviews' => 'reviews#create'
 
   root 'movies#index'
   # The priority is based upon order of creation: first created -> highest priority.

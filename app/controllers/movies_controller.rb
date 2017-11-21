@@ -10,6 +10,12 @@ class MoviesController < ApplicationController
   # GET /movies/1
   # GET /movies/1.json
   def show
+    # @sum = 0
+    # @sum = @sum + 특정 영화에 있는 모든 리뷰들을 돌면서 하나씩 더하기
+    # 1. 특정 영화에 담긴 리뷰들을 다 불러온다.
+    # 2. 리뷰를 각각 돌면서(each) rating에 담겨 있는 점수를 @sum 더한다
+    # 3. 누적된 값을 전체 리뷰 수로 나눠준다.
+    # @avg
   end
 
   # GET /movies/new
