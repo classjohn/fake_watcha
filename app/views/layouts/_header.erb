@@ -1,30 +1,28 @@
-<!-- Always shows a header, even in smaller screens. -->
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-<header class="mdl-layout__header">
-  <div class="mdl-layout__header-row">
-    <!-- Title -->
-    <span class="mdl-layout-title">왓챠</span>
-    <!-- Add spacer, to align navigation to the right -->
-    <div class="mdl-layout-spacer"></div>
-    <!-- Navigation. We hide it in small screens. -->
-    <nav class="mdl-navigation mdl-layout--large-screen-only">
-      <a class="mdl-navigation__link" href=""><%= current_user.email if current_user %>님 환영합니다.</a>
-      <%= link_to '로그인', new_user_session_path, class: "mdl-navigation__link" %>
-      <%= link_to '로그아웃', destroy_user_session_path, method: :delete, class: "mdl-navigation__link"%>
-      <%= link_to '관리자', admin_users_path, class: "mdl-navigation__link" %>
-    </nav>
+<header>
+  <div class="collapse bg-dark" id="navbarHeader">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 py-4">
+          <h4 class="text-white">왓챠!</h4>
+          <p class="text-muted">영화 평점 서비스 !</p>
+        </div>
+        <div class="col-sm-4 py-4">
+          <h4 class="text-white">Contact</h4>
+          <ul class="list-unstyled">
+            <li><%= link_to '로그인', new_user_session_path, class: "text-white" %></li>
+            <li><%= link_to '로그아웃', destroy_user_session_path, method: :delete, class: "text-white" %></li>
+            <li><%= link_to '관리자', admin_users_path, class: "text-white" %></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="navbar navbar-dark bg-dark">
+    <div class="container d-flex justify-content-between">
+      <a href="/" class="navbar-brand">왓챠!</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
   </div>
 </header>
-<div class="mdl-layout__drawer">
-  <span class="mdl-layout-title">Title</span>
-  <nav class="mdl-navigation">
-    <a class="mdl-navigation__link" href=""><%= current_user.email if current_user %>님 환영합니다.</a>
-    <%= link_to '로그인', new_user_session_path, class: "mdl-navigation__link" %>
-    <%= link_to '로그아웃', destroy_user_session_path, method: :delete, class: "mdl-navigation__link"%>
-    <a class="mdl-navigation__link" href="">Link</a>
-  </nav>
-</div>
-<main class="mdl-layout__content">
-  <div class="page-content"><!-- Your content goes here --></div>
-</main>
-</div>
