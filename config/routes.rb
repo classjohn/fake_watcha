@@ -7,6 +7,13 @@ Rails.application.routes.draw do
   get 'movies/:id/reviews' => 'reviews#create'
 
   root 'movies#index'
+
+  namespace :admin do
+    resources :users do
+      put :upgrade, on: :member
+      put :downgrade, on: :member
+    end
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

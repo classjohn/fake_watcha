@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'faker'
+
 gem 'rails_12factor', group: :production
 gem 'pg', group: :production
 

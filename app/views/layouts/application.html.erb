@@ -5,14 +5,15 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 </head>
 <body>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-  <%= current_user.email if current_user %>님 환영합니다. 
-  <%= link_to '로그인', new_user_session_path%>
-  <%= link_to '로그아웃', destroy_user_session_path, method: :delete%>
+  <%= render 'layouts/header'%>
+
 <%= yield %>
+  <%= render 'layouts/footer'%>
 
 </body>
 </html>
