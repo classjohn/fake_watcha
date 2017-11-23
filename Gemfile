@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+# ses 쓸때 쓰는 gem
 gem 'aws-sdk-rails'
 
 gem 'fog-aws'
