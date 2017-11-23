@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'trix'
 # ses 쓸때 쓰는 gem
 gem 'aws-sdk-rails'
 
@@ -9,7 +10,7 @@ gem 'mini_magick'
 gem 'faker'
 
 gem 'rails_12factor', group: :production
-gem 'pg', group: :production
+# gem 'pg', group: :production
 
 gem 'cancancan', '~> 2.0'
 gem 'devise'

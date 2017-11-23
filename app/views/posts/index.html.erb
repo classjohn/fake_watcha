@@ -17,8 +17,8 @@
     <% @posts.each do |post| %>
       <tr>
         <td><%= post.title %></td>
-        <td><%= post.content %></td>
-        <td><%= post.photo %></td>
+        <td><%= post.content.html_safe %></td>
+        <td><%= image_tag post.photo, size: "50x50" %></td>
         <td><%= post.user.email if post.user %></td>
         <td><%= link_to 'Show', post %></td>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>
